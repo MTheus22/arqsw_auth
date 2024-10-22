@@ -1,0 +1,22 @@
+### Registro de usuário
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "username": "edituser",
+  "password": "editpassword",
+  "role"  : "editor"
+}
+
+### Login de usuário
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "mypassword"
+}
+
+### Rota protegida (substitua <token> pelo JWT que você recebeu no login)
+GET http://localhost:5000/protected
+Authorization: Bearer <token>
