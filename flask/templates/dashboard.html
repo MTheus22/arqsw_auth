@@ -6,35 +6,35 @@
 <body>
     <h1>Você está autenticado!</h1>
     
-    <form action="{{ url_for('protected') }}" method="GET">
+    <form action="{{ url_for('protected_routes.protected') }}" method="GET">
         <button type="submit">Acessar Rota Protegida</button>
     </form>
     
     <br>
 
     <!-- Botão para visualizar conteúdo (GET) -->    
-    <form action="{{ url_for('view_content') }}" method="GET">
+    <form action="{{ url_for('content_routes.view_content') }}" method="GET">
         <button type="submit">Visualizar Conteúdo</button>
     </form>
 
     <br>
 
     <!-- Botão para Criar conteúdo (POST) -->
-    <form action="{{ url_for('create_content') }}" method="POST">
+    <form action="{{ url_for('content_routes.create_content') }}" method="POST">
         <button type="submit">Criar Conteúdo</button>
     </form>
     
     <br>
 
     <!-- Botão para Editar conteúdo (PUT) -->
-    <form action="{{ url_for('edit_content') }}" method="POST">
+    <form action="{{ url_for('content_routes.edit_content') }}" method="POST">
         <button type="submit">Editar Conteúdo</button>
     </form>
 
     <br>
 
     <!-- Botão para Deletar conteúdo (DELETE) -->
-    <form action="{{ url_for('delete_content') }}" method="POST">
+    <form action="{{ url_for('content_routes.delete_content') }}" method="POST">
         <button type="submit">Deletar Conteúdo</button>
     </form>
 
